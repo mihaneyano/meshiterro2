@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'post_images/show'
 
   get '/homes/about' => 'homes#about', as: 'about'
+
+  resources :post_images, only: [:new, :create, :index, :show]
 end
